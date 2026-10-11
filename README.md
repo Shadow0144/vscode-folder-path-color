@@ -29,8 +29,9 @@ This extension does not have any additional requirements or dependencies.
 
 | Property  | Type   | Description                                                                                                                                       |
 | --------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`    | string | The path of the folder, relative to the workspace. Supports glob patterns (e.g., `**/components/*`, `src/**/test`). |
-| `color`   | string | The color to assign to the folder. This should be a valid Hex color or X11 color name.                                                            |
+| `path`    | string | The path of the folder, relative to the workspace. Supports glob patterns (e.g., `**/components/*`, `src/**/test`).                               |
+| `color`   | string | The color to assign to the folder. This should be a valid Hex value or X11 color name.                                                            |
+|           |        | For multi-word colors (e.g. "Alice Blue"), the color name is specified without spaces (e.g. "aliceblue")                                          |
 | `symbol`  | string | A short symbol to display next to the folder. This should be a string of maximum 2 characters. You can also use an emoji for more visual display. |
 | `tooltip` | string | A tooltip to display when you hover over the folder's symbol.                                                                                     |
 
@@ -39,7 +40,7 @@ Example configuration:
 ```json
 "folder-path-color.folders": [
     { "path": "frontend", "symbol": "SR", "tooltip": "Source files" },
-    { "path": "packages/common", "symbol": "T", "tooltip": "Common" },
+    { "path": "packages/common", "color": "darkslateblue", "symbol": "T", "tooltip": "Common" },
     { "path": "**/components/*", "color": "aquamarine", "symbol": "⚛", "tooltip": "React Components" },
     { "path": "src/**/test", "color": "red", "symbol": "🧪", "tooltip": "Test Files" },
 ]
