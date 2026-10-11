@@ -2098,7 +2098,7 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "yarn run package",
+    "vscode:prepublish": "tsc -p .",
     "precompile": "node scripts/generate-slots.js",
     "compile": "webpack",
     "watch": "node scripts/generate-slots.js && webpack --watch",
